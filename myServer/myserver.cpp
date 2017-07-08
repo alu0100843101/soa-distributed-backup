@@ -24,6 +24,7 @@ void MyServer::newConnection()
     socket_->flush();
 
     socket_->waitForBytesWritten(3000);
+
     socket_->close();
 }
 

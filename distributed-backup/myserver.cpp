@@ -12,3 +12,13 @@ MyServer::~MyServer()
 {
     delete ui;
 }
+
+void MyServer::on_FindPushButton_clicked()
+{
+
+}
+
+void MyServer::on_StartPushButton_clicked()
+{
+
+}

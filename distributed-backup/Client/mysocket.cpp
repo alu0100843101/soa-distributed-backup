@@ -22,7 +22,7 @@ void MySocket::run()
 void MySocket::ReadyRead()
 {
     QDataStream in(socket_);
-    //in.setVersion(QDataStream::Qt_5_8);
+    in.setVersion(QDataStream::Qt_5_8);
 
     in >> filesize_;
 
@@ -78,6 +78,6 @@ void MySocket::ReadyRead()
 void MySocket::SlotClose()
 {
     socket_->close();
-    emit SignalClose();
+    //emit SignalClose();
     quit();
 }

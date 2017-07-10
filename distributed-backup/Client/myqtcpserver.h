@@ -20,7 +20,7 @@ public:
 
 public slots:
     void start();
-    void end();
+    //void end();
 
 signals:
     void closeSignal();

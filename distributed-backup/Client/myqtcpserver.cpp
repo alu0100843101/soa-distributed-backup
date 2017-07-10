@@ -11,16 +11,16 @@ void MyQTcpServer::start()
     else
         qDebug() << "Server can not connect";
 }
-
+/**
 void MyQTcpServer::end(){
     emit closeSignal();
 }
-
+**/
 void MyQTcpServer::incomingConnection(qintptr socketDescriptor)
 {
     MySocket *mySocket_ = new MySocket(socketDescriptor, path_, this);
     connect(mySocket_, SIGNAL(finished()), mySocket_, SLOT(deleteLater()));
 
     mySocket_->start();
-    connect(mySocket_, SIGNAL(SignalClose()), this, SLOT(end()));
+    //connect(mySocket_, SIGNAL(SignalClose()), this, SLOT(end()));
 }

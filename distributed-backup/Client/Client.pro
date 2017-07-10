@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-07-01T11:16:42
+# Project created by QtCreator 2017-07-10T02:48:25
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = distributed-backup
+TARGET = Client
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -24,14 +24,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        myserver.cpp \
-    myqtcpserver.cpp \
+        client.cpp \
     senddestination.cpp \
-    mysocket.cpp
+    mysocket.cpp \
+    myqtcpserver.cpp
 
-HEADERS  += myserver.h \
-    myqtcpserver.h \
+HEADERS  += client.h \
     senddestination.h \
-    mysocket.h
+    mysocket.h \
+    myqtcpserver.h
 
-FORMS    += myserver.ui
+FORMS    += client.ui

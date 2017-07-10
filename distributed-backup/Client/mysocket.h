@@ -1,11 +1,13 @@
 #ifndef MYSOCKET_H
 #define MYSOCKET_H
 
-#include <QTcpSocket>
-#include <QProcess>
-#include <QThread>
-#include <QFile>
 #include <QDir>
+#include <QFile>
+#include <QThread>
+#include <QTcpSocket>
+#include <QDataStream>
+#include <QHostAddress>
+#include <QNetworkInterface>
 
 class MySocket : public QThread
 {

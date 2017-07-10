@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-07-09T11:16:42
+# Project created by QtCreator 2017-07-01T11:16:42
 #
 #-------------------------------------------------
 
@@ -25,9 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         myserver.cpp \
-    myqtcpserver.cpp
+    myqtcpserver.cpp \
+    senddestination.cpp \
+    mysocket.cpp
 
 HEADERS  += myserver.h \
-    myqtcpserver.h
+    myqtcpserver.h \
+    senddestination.h \
+    mysocket.h
 
 FORMS    += myserver.ui

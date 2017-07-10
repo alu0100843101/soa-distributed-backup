@@ -1,8 +1,15 @@
 #ifndef MYQTCPSERVER_H
 #define MYQTCPSERVER_H
 
+#include <QDirIterator>
 #include <QMainWindow>
+#include <QFileDialog>
+#include <QMessageBox>
 #include <QTcpServer>
+#include <QDebug>
+#include <QFile>
+
+#include "mysocket.h"
 
 class MyQTcpServer : public QTcpServer
 {
@@ -22,6 +29,7 @@ protected:
     void incomingConnection(qintptr socketDescriptor);
 
 private:
+    //Se pueden tener puertos y direcciones ip fijas o podemos irlas asignando.
     QHostAddress address_;
     quint16 port_;
     QString path_;

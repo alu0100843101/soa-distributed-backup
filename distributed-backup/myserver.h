@@ -1,11 +1,11 @@
 #ifndef MYSERVER_H
 #define MYSERVER_H
 
-#include <QTcpServer>
 #include <QMainWindow>
 #include <QAbstractSocket>
 
 #include "myqtcpserver.h"
+#include "senddestination.h"
 
 namespace Ui {
 class MyServer;
@@ -21,6 +21,7 @@ public:
 
 public slots:
     //void myStart();
+    void sendSignal();
 
 protected:
     //void incomingConnection(qintptr socketDescriptor);
@@ -31,8 +32,9 @@ private slots:
 
 private:
     Ui::MyServer *ui;
-
-    MyQTcpServer *server_;
+                                    //El árbol de directorios transferido
+    MyQTcpServer *server_;          //Puede quedarse en el servidor
+    SendDestination *destination_;  //O puede mandarlo a otro destino(Cliente).
 
 };
 

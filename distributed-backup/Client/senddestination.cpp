@@ -67,4 +67,6 @@ void SendDestination::run()
 }
 
 void SendDestination::closeSlot()
-{}
+{
+    qDebug() << "Close";
+}
